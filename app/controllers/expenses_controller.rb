@@ -5,9 +5,7 @@ class ExpensesController < ApplicationController
 
     @expense.save!
 
-    render :show
-  rescue
-    render json: {}, status: 406
+    render json: {"status": "200", "message": "Expense created with success!"}
   end
 
   private
