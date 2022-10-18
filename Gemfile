@@ -5,8 +5,6 @@ ruby "3.1.0"
 
 gem "rails", "~> 7.0.4"
 
-gem 'jbuilder', '~> 2.10.1'
-
 gem "pg", "~> 1.1"
 
 gem "puma", "~> 5.0"
