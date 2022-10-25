@@ -16,6 +16,15 @@ class ExpensesController < ApplicationController
     render json: {"status": "200", "message": "Expense created with success!"}
   end
 
+  def update
+    binding.pry
+    @expense.attributes = expense_params
+
+    @expense.save!
+
+    render json: {"status": "200", "message": "Expense updated with success!"} 
+  end
+
   def destroy
     @expense.destroy!
 
