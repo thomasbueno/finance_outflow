@@ -1,5 +1,11 @@
 class ExpensesController < ApplicationController
-  before_action :load_expense, only: [:show, :update, :destroy]
+  before_action :load_expense, only: [:update, :destroy]
+
+  def index
+    filtered_expenses = Expense.where(date: params[:start_date]..params[:end_date])
+
+    render json: filtered_expenses
+  end
 
   def create
     @expense = Expense.new
