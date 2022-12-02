@@ -17,7 +17,6 @@ class ExpensesController < ApplicationController
   end
 
   def update
-    binding.pry
     @expense.attributes = expense_params
 
     @expense.save!
